@@ -1,0 +1,243 @@
+.homePageWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 100vh;
+}
+
+.formWrapper{
+  background: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  margin: 5%;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+footer a{
+  color: #4aee88;
+}
+
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLabel{
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.homePageLogo{
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.inputBox{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn, .leaveBtn {
+  background: #4aed88;
+  width: 100px;
+  margin-left: auto;
+}
+
+.joinBtn:hover, .leaveBtn:hover {
+  background: #2b824c;
+}
+
+.createInfo{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn{
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
+}
+.createNewBtn:hover, footer a:hover{
+  color: #368654;
+  border-color: #368654;
+}
+
+ .mainWrap{
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height: 100vh;
+ }
+
+ .aside{
+  background: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .asideInner{
+  flex: 1;
+
+ }
+
+ .clientsList{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+
+ .client{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+ }
+ .userName{
+  margin-top: 10px;
+ }
+
+ .logo{
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+ }
+
+ .logoImage{
+  height: 60px;
+ } 
+
+.leaveBtn{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.CodeMirror{
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mainWrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toggleBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #d8d7d7;
+    border-radius: 10px;
+    color: #368654;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 200; /* Increased z-index to ensure it's above other elements */
+  }
+
+  .btn{
+      font-size: 14px;
+  }
+
+  .aside {
+    position: fixed;
+    top: 0;
+    left: 0; /* Adjust the width as needed */
+    min-height: calc(100vh - 22px);    
+    width: 35%; /* Adjust the width as needed */
+    background: #1c1e29;
+    padding: 16px;
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto; /* Add this line to enable vertical scrollbar */
+    margin-bottom: 20%;
+  }
+
+  .asideInner {
+    flex: 2;
+  }
+
+  .clientsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: 10px; */
+  }
+
+  .logo {
+    /* display: none; */
+    border-bottom: 1px solid #424242;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .logoImage {
+    height: 48px;
+  }
+
+  .leaveBtn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .CodeMirror {
+    min-height: calc(100vh - 20px);
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 20px;
+  }
+
+  .aside.open {
+    left: 0;
+    width: 0; /* Adjust the width as needed */
+    padding: 0;
+    transition: left 0.3s ease-in-out;
+z-index: -1;
+overflow-y: auto; /* Add this line to enable vertical scrollbar */
+
+  }
+
+  .aside.open .logo,
+  .aside.open .clientsList,
+  .aside.open .copyBtn,
+  .aside.open .leaveBtn {
+    display: none;
+    /* Add any additional styles you need for these elements when the aside is open */
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .toggleBtn {
+    display: none; /* Hide the button */
+  }
+}
